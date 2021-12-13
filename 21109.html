@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입양식</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+<div class="input-form col-md-12 mx-auto">
+
+    <h4 class="mb-3">회원가입</h4>
+    <form class="validation-form" novalidate method="post" action="21109ok.php">
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <label for="userid">아이디</label>
+                <input type="text" class="form-control" id="userid" placeholder="아이디를 입력하세요." name="userid" value="" required>
+                <div class="invalid-feedback"> 아이디를 입력해주세요. </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <label for="userpwd">비밀번호</label>
+                <input type="password" class="form-control" id="userpwd" placeholder="비밀번호를 입력하세요." name="userpwd" value="" required>
+                <div class="invalid-feedback"> 비밀번호를 입력해주세요. </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <label for="username">이름</label>
+                <input type="text" class="form-control" name="username" id="username" placeholder="이름을 입력하세요." value="" required>
+                <div class="invalid-feedback"> 이름을 입력해주세요. </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <label for="major">전공</label>
+                <select class="form-control" name="major" id="major">
+                    <option value="">선택</option>
+                    <option value="web">스마트웹콘텐츠과</option>
+                    <option value="sw" selected>소프트웨어개발과</option>
+                    <option value="beauty">뷰티디자인과</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <label for="userbirth">생년월일</label>
+                <input type="date" class="form-control" name="userbirth" id="userbirth" value="" required>
+                <div class="invalid-feedback"> 생년월일을 선택하세요. </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <label for="userhobby">관심분야</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="pg" id="userhobbypg" name="userhobby[]">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        프로그래밍
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="webtoon" id="userhobbywebtoon" name="userhobby[]" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                        웹툰제작
+                    </label>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <label for="useraddress">거주지</label>
+                <div class="form-check">
+                    <input class="form-check-input" value="성남시" type="radio" name="useraddress" id="useraddress">
+                    <label class="form-check-label" for="useraddress">
+                        성남시
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" value="광주시" type="radio" name="useraddress" id="useraddress" checked>
+                    <label class="form-check-label" for="useraddress">
+                        광주시
+                    </label>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <label for="userintroduce" class="form-label">간단소개</label>
+                <textarea class="form-control" name="userintroduce" id="userintroduce" rows="5"></textarea>
+            </div>
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" type="submit">저장</button>
+    </form>
+</div>
+</body>
+
+</html>
